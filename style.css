@@ -43,7 +43,7 @@ box-sizing: border-box;
 
 html, body {
     width: 100%;
-    background-color: #FFFFFF;    
+    background-color: var(--bg-primary);    
     scroll-behavior: smooth;
 }
 
@@ -70,16 +70,17 @@ header {
     width: 100%;
     min-height: 100svh;
     justify-content: space-between;
-    /* gap: 2rem; */
+    gap: 1rem;
 }
 
 header .nav_div {
     display: flex;
-    width: 100%;
+    width: 90%;
     height: 6.25rem;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5%;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .logo {
@@ -100,6 +101,7 @@ header .nav_div {
 
     &:hover {
         text-decoration: underline;
+        color: #627EEA;
     }
 }
 
@@ -121,9 +123,11 @@ header .nav_div {
 .hero_section {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-    padding: 3rem 5%;
+    gap: 1rem;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%; 
+    padding: 2rem 0;   
     justify-content: center;
     align-items: center;
 }
@@ -141,7 +145,7 @@ header .nav_div {
     font-size: 3.6rem;
     width: 60rem;
     text-align: center;
-    line-height: 5.5rem;
+    line-height: 5rem;
     font-weight: 500;
 }
 
@@ -156,9 +160,10 @@ header .nav_div {
 .hero_section .quick_buttons {
     display: flex;
     gap: 3rem;
+    margin-top: 1rem;
 }
 
-button {
+.quick_buttons button {
     width: 11rem;
     height: 3rem;
     padding: 0 1rem;
@@ -167,7 +172,7 @@ button {
     border: none;
 }
 
-button:first-child {
+.quick_buttons button:first-child {
     background-color: #627EEA;
     color: #FFFFFF;
     border: 2px solid #627EEA;
@@ -179,7 +184,7 @@ button:first-child {
     }
 }
 
-button:last-child {
+.quick_buttons button:last-child {
     background-color: unset;
     display: flex;
     align-items: center;
@@ -192,7 +197,7 @@ button:last-child {
     }
 }
 
-button:last-child::before {
+.quick_buttons button:last-child::before {
     content: ' ';
     width: 2rem;
     height: 2rem;
@@ -207,15 +212,111 @@ button:last-child::before {
 .map_div {
     display: block;
     width: 100%;
-    height: 20rem;
+    height: 25rem;
     background-image: url(images/map.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 80% 100%;
+    background-size: contain;
 }
-/* 
-.map {
-    display: none;
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0;
+    gap: 3rem;
     width: 100%;
-    height: 20rem;
-} */
+}
+
+main .features_section {
+    display: flex;
+    width: 90%;
+    margin: 0 5%;
+    background-color: #FFFFFF;
+    padding: 3rem;
+    border-radius: 1rem;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.features_section .first_child {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    gap: 2rem;
+    position: relative;
+}
+
+.features_section .first_child h2 {
+    font-size: 2.3rem;
+    font-weight: 500;
+}
+
+.features_section .first_child p {
+    font-size: 1.3rem;
+    color: #606060;
+}
+
+.features_section .first_child button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 13rem;
+    height: 3rem;
+    padding: 0 1rem;
+    border-radius: 100vh;
+    font-size: 1rem;
+    border: none;
+    background-color: #627EEA;
+    color: #FFFFFF;
+    transition: all 500ms;
+    position: absolute;
+    bottom: 0;
+
+    &:hover {
+        background-color: #4264ee;
+    }
+}
+
+.features_section .first_child button::after {
+    content: ' ';
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url(icons/carbon_arrow_up.svg);
+    /* position: absolute;
+    right: 0; */
+}
+
+.features_section .second_child {
+    display: grid;
+    grid-template-columns: repeat(2, 20rem);
+    grid-template-rows: repeat(2, auto);
+    gap: 3rem;
+}
+
+.features_section .second_child div {
+    width: 100%;
+}
+
+.features_section .second_child div img {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: rgba(98, 126, 234, 0.10);
+    margin-bottom: 1rem;
+}
+
+.features_section .second_child div h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #627EEA;
+    margin-bottom: 1rem;
+}
+
+.features_section .second_child div p {
+    font-size: 1rem;
+    color: #606060;
+}
+
