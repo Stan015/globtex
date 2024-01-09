@@ -17,7 +17,7 @@
                 <img src="images/globtex.svg" alt="globtex logo text">
             </a>
 
-            <nav class="primary_nav">
+            <nav class="primary_nav" aria-labelledby="primary_nav">
                 <ul>
                     <li><a href="#">Features</a></li>
                     <li><a href="#">Community</a></li>
@@ -27,26 +27,24 @@
                 </ul>
             </nav>
 
-            <nav class="secondary_nav">
+            <nav class="secondary_nav" aria-labelledby="secondary_nav">
                 <a href="#">Get Started Now</a>
             </nav>
         </div>
 
         <section class="hero_section">
             <p>Join over +35k community</p>
-            <h1>Creating Global Connections and  Building Local Communities</h1>
-            <p>We bridge the gap between borders, empowering businesses and individuals to thrive on a global scale</p>
+            <h1>Creating Global Connections And  Building Local Communities</h1>
+            <p class="second_p">We bridge the gap between borders, empowering businesses and individuals to thrive on a global scale</p>
 
             <div class="quick_buttons">
-                <a href="#">Get Started Today</a>
-                <a href="#">
-                    <img src="icons/play_icon.svg" alt="play icon">
-                    Watch a demo
-                </a>
+                <button type="button">Get Started Today</button>
+                <button type="button">Watch a demo</button>
             </div>
         </section>
 
-        <img src="images/map_base.svg" alt="map">
+        <div class="map_div"></div>
+        <!-- <img src="images/map.svg" alt="map" class="map"> -->
     </header>
 
     <main>
@@ -110,7 +108,86 @@
     </main>
 
     <section class="faq_section">
+        <p>Your Answers</p>
+        <h2>Frequently Asked Questions</h2>
 
+        <div class="accordion" id="accordion_group">
+            <div 
+                id="accordion_item1" 
+                class="accordion_item"
+                role="region"
+                aria-labelledby="faq_1">
+
+                <h3 id="faq_1">
+                    <button
+                    type="button"
+                    class="accordion_trigger"
+                    aria-expanded="true"
+                    aria-controls="answer1">
+                        <span class="accordion_title">What sets GlobNest apart in the realm of global connections?</span>
+                    </button>
+                </h3>
+
+                <p id="answer1">Our platform empowers users to effortlessly expand their reach on a global scale while fostering the spirit of local engagement.</p>
+            </div>
+
+            <div 
+                id="accordion_item2" 
+                class="accordion_item"
+                role="region"
+                aria-labelledby="faq_1">
+
+                <h3 id="faq_2">
+                    <button
+                    type="button"
+                    class="accordion_trigger"
+                    aria-expanded="false"
+                    aria-controls="answer2">
+                        <span class="accordion_title">Is there a free trial available for GlobNest?</span>
+                    </button>
+                </h3>
+
+                <p id="answer2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ab. Accusamus blanditiis minima, odit, illo quasi, optio impedit quia totam fugit rem incidunt in harum id. Fuga praesentium fugit ipsa?</p>
+            </div>
+
+            <div 
+                id="accordion_item3" 
+                class="accordion_item"
+                role="region"
+                aria-labelledby="faq_3">
+
+                <h3 id="faq_3">
+                    <button
+                    type="button"
+                    class="accordion_trigger"
+                    aria-expanded="false"
+                    aria-controls="answer3">
+                        <span class="accordion_title">Which businesses and individuals benefit most from GlobNest?</span>
+                    </button>
+                </h3>
+
+                <p id="answer3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ab. Accusamus blanditiis minima, odit, illo quasi, optio impedit quia totam fugit rem incidunt in harum id. Fuga praesentium fugit ipsa?</p>
+            </div>
+
+            <div 
+                id="accordion_item4" 
+                class="accordion_item"
+                role="region"
+                aria-labelledby="faq_4">
+
+                <h3 id="faq_4">
+                    <button
+                    type="button"
+                    class="accordion_trigger"
+                    aria-expanded="false"
+                    aria-controls="answer4">
+                        <span class="accordion_title">Can I personalize my communication workspace ?</span>
+                    </button>
+                </h3>
+
+                <p id="answer4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ab. Accusamus blanditiis minima, odit, illo quasi, optio impedit quia totam fugit rem incidunt in harum id. Fuga praesentium fugit ipsa?</p>
+            </div>
+        </div>
     </section>
 
     <section class="global_connection">
@@ -136,49 +213,58 @@
                 </div>
                 <p>Subscribe to stay in the loop with our latest hub  tips, exclusive offers, and exciting product launches.</p>
             </div>
+
+            <div>
+                <div>
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Awards & Recognition</a></li>
+                        <li><a href="#">Customer Stories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Customer Stories</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Accessibility</h4>
+                    <ul>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Advertise with Us</a></li>
+                        <li><a href="#">Brand Assets</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Privacy Policy</h4>
+                    <ul>
+                        <li><a href="#">Press Room</a></li>
+                        <li><a href="#">Knowledge Base</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Service Status</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="second_div">
-            <div>
-                <h4>About Us</h4>
-                <ul>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Awards & Recognition</a></li>
-                    <li><a href="#">Customer Stories</a></li>
-                </ul>
+            <div class="copyright">
+                &copy; All rights reserved.
+                <div class="individuals" aria-label="copyright individuals">
+                    <a href="https://twitter.com/Austine_Ifenna">Augustine Ifenna (product designer)</a>
+                    <a href="https://twitter.com/StanleyAzi">Stanley Azi (Frontend Developer)</a>
+                </div>
             </div>
 
-            <div>
-                <h4>Customer Service</h4>
-                <ul>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Customer Stories</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">About Us</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4>Accessibility</h4>
-                <ul>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Advertise with Us</a></li>
-                    <li><a href="#">Brand Assets</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4>Privacy Policy</h4>
-                <ul>
-                    <li><a href="#">Press Room</a></li>
-                    <li><a href="#">Knowledge Base</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                    <li><a href="#">Service Status</a></li>
-                </ul>
-            </div>
+            <a href="#">2024 Terms and condition</a>
         </div>
     </footer>
 
