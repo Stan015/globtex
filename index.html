@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/3ed052ba84.js" crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/3ed052ba84.js" crossorigin="anonymous"></script>
     <title>Globtex</title>    
     <link rel="icon" type="image/svg" href="images/globtex_logo.svg">
     <link rel="stylesheet" href="style.css">
@@ -43,8 +43,7 @@
             </div>
         </section>
 
-        <div class="map_div"></div>
-        <!-- <img src="images/map.svg" alt="map" class="map"> -->
+        <img src="images/map.png" alt="map illustration" class="map">
     </header>
 
     <main>
@@ -57,22 +56,22 @@
             </div>
 
             <div class="second_child">
-                <div>
+                <div class="feature">
                     <img src="icons/vector_icon.svg" alt="vector icon">
                     <h3>Real-time Collaboration</h3>
                     <p>Instant messaging, audio, and video calls for seamless real-time team collaboration.</p>
                 </div>
-                <div>
+                <div class="feature">
                     <img src="icons/search_icon.svg" alt="search icon">
                     <h3>Scan and Match</h3>
                     <p>Our scan and match feature intelligently identifies and pairs you with like-minded collaborators</p>
                 </div>
-                <div>
+                <div class="feature">
                     <img src="icons/check_icon.svg" alt="check icon">
                     <h3>Privacy at the Core</h3>
                     <p>Communicate with confidence using end-to-end encryption, ensuring every conversation is private and secure,</p>
                 </div>
-                <div>
+                <div class="feature">
                     <img src="icons/message_icon.svg" alt="message icon">
                     <h3>Unified Messaging Hub</h3>
                     <p>One hub for all communication channels ,chats and connection  forum.</p>
@@ -82,33 +81,33 @@
 
         <section class="second_section">
             <div class="global_reach">
-                <img src="images/forging_strong.svg" alt="users">
+                <img src="images/users1.svg" alt="users">
 
                 <div>
                     <p>Global Reach</p>
-                    <h2>Forging strong connections worldwide</h2>
+                    <h2>Forging strong <br>connections worldwide</h2>
                     <p>The platform seamlessly connects users globally while nurturing strong local communities, offering a unique balance between reaching a global audience.</p>
 
-                    <a href="#">Learn More <img src="icons/carbon_arrow_up.svg" alt="arrow icon"></a>
+                    <button type="button">Learn More</button>
                 </div>
             </div>
 
             <div class="global_scaling">
                 <div>
                     <p>Global Scaling</p>
-                    <h2>Empowerment for Businesses and Individuals</h2>
+                    <h2>Empowerment for <br>Businesses and Individuals</h2>
                     <p>TBusinesses and individuals can thrive on a global scale, empowered by the platform to expand their reach and connect with like-minded individuals worldwide.</p>
 
-                    <a href="#">Learn More <img src="icons/carbon_arrow_up.svg" alt="arrow icon"></a>
+                    <button type="button">Learn More</button>
                 </div>
 
-                <img src="images/empowering.svg" alt="users">
+                <img src="images/users2.svg" alt="users">
             </div>
         </section>
     </main>
 
     <section class="faq_section">
-        <p>Your Answers</p>
+        <p class="first_child">Your Answers</p>
         <h2>Frequently Asked Questions</h2>
 
         <div class="accordion" id="accordion_group">
@@ -128,7 +127,7 @@
                     </button>
                 </h3>
 
-                <p id="answer1">Our platform empowers users to effortlessly expand their reach on a global scale while fostering the spirit of local engagement.</p>
+                <p aria-hidden="false" id="answer1" class="faq_answer">Our platform empowers users to effortlessly expand their reach on a global scale while fostering the spirit of local engagement.</p>
             </div>
 
             <div 
@@ -147,7 +146,7 @@
                     </button>
                 </h3>
 
-                <p id="answer2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ab. Accusamus blanditiis minima, odit, illo quasi, optio impedit quia totam fugit rem incidunt in harum id. Fuga praesentium fugit ipsa?</p>
+                <p aria-hidden="true" id="answer2" class="faq_answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ab. Accusamus blanditiis minima, odit, illo quasi, optio impedit quia totam fugit rem incidunt in harum id. Fuga praesentium fugit ipsa?</p>
             </div>
 
             <div 
@@ -166,7 +165,7 @@
                     </button>
                 </h3>
 
-                <p id="answer3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ab. Accusamus blanditiis minima, odit, illo quasi, optio impedit quia totam fugit rem incidunt in harum id. Fuga praesentium fugit ipsa?</p>
+                <p aria-hidden="true" id="answer3" class="faq_answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ab. Accusamus blanditiis minima, odit, illo quasi, optio impedit quia totam fugit rem incidunt in harum id. Fuga praesentium fugit ipsa?</p>
             </div>
 
             <div 
@@ -181,40 +180,42 @@
                     class="accordion_trigger"
                     aria-expanded="false"
                     aria-controls="answer4">
-                        <span class="accordion_title">Can I personalize my communication workspace ?</span>
+                        <span class="accordion_title">Can I personalize my communication workspace?</span>
                     </button>
                 </h3>
 
-                <p id="answer4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ab. Accusamus blanditiis minima, odit, illo quasi, optio impedit quia totam fugit rem incidunt in harum id. Fuga praesentium fugit ipsa?</p>
+                <p aria-hidden="true" id="answer4" class="faq_answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ab. Accusamus blanditiis minima, odit, illo quasi, optio impedit quia totam fugit rem incidunt in harum id. Fuga praesentium fugit ipsa?</p>
             </div>
         </div>
     </section>
 
-    <section class="global_connection">
-        <div>
-            <h2>Connect Globally, <br>Thrive Locally with GlobNest!</h2>
-            <p>Ready to transform the way you connect, collaborate, and create?</p>
+    <section>
 
-            <a href="#">Get Started Today</a>
-        </div>
     </section>
 
     <footer>
-        <div class="first_ftr_div">
-            <div>
+        <div class="global_connection">
+            <h2>Connect Globally, <br>Thrive Locally with GlobNest!</h2>
+            <p>Ready to transform the way you connect, collaborate, and create?</p>
+
+            <button type="button">Get Started Today</button>
+        </div>
+
+        <div class="second_ftr_div">
+            <div class="first_child">
                 <div class="social_div">
-                    <i class="fa-brands fa-facebook-f fa-2xl"></i>
-                    <i class="fa-brands fa-square-instagram fa-2xl"></i>
-                    <i class="fa-brands fa-linkedin-in fa-2xl"></i>
+                    <a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f fa-1x"></i></a>
+                    <a href="#" aria-label="instagran"><i class="fa-brands fa-square-instagram fa-1x"></i></a>
+                    <a href="#" aria-label="linkedin"><i class="fa-brands fa-linkedin-in fa-1x"></i></a>
                 </div>
-                <div class="email div">
+                <div class="email_div">
                     <input type="email" name="email" id="email" placeholder="Enter Your Email">
                     <button type="submit">Subscribe</button>
                 </div>
                 <p>Subscribe to stay in the loop with our latest hub  tips, exclusive offers, and exciting product launches.</p>
             </div>
 
-            <div>
+            <div class="second_child">
                 <div>
                     <h4>About Us</h4>
                     <ul>
@@ -255,7 +256,7 @@
             </div>
         </div>
 
-        <div class="second_div">
+        <div class="third_ftr_div">
             <div class="copyright">
                 &copy; All rights reserved.
                 <div class="individuals" aria-label="copyright individuals">
@@ -264,7 +265,7 @@
                 </div>
             </div>
 
-            <a href="#">2024 Terms and condition</a>
+            <a href="#" class="terms">2024 Terms and condition</a>
         </div>
     </footer>
 
