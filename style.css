@@ -564,7 +564,9 @@ footer .global_connection {
 }
 
 .global_connection div {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: max-content;
     height: inherit;
     position: inherit;
