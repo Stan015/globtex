@@ -465,14 +465,14 @@ main .second_section .global_scaling {
     border: 2px solid #DCDCDC;
     border-radius: 1rem;
     overflow: hidden;
-    @supports (overflow: clip) {
+    /* @supports (overflow: clip) {
         overflow: clip;
-    }
+    } */
 }
 
 .accordion_item h3 {
     display: flex;
-    width: 100%;
+    width: 98%;
     height: 4rem;
     color: #606060;
     align-items: center;
@@ -486,7 +486,7 @@ main .second_section .global_scaling {
     background-image: url(icons/arrow_down.svg);
     background-position: center;
     position: absolute;
-    right: 1.5rem;
+    right: 0;
 }
 
 .accordion_trigger {
@@ -543,15 +543,14 @@ footer .global_connection {
     width: 90%;
     height: 20rem;
     margin: 0 5%;
-    padding: 2rem;
     background-color: #627EEA;
     border-radius: 1rem;
     position: absolute;
     top: -10rem;
     overflow: hidden;
-    @supports (overflow: clip) {
+    /* @supports (overflow: clip) {
         overflow: clip;
-    }
+    } */
 }
 
 .global_connection::after {
@@ -565,7 +564,13 @@ footer .global_connection {
 }
 
 .global_connection div {
+    display: block;
     width: max-content;
+    height: inherit;
+    position: inherit;
+    top: 0;
+    left: 0;
+    padding: 2rem;
 }
 
 .global_connection h2 {
