@@ -1,14 +1,43 @@
-// //toggle FAQ accordion
-const accordionToggle = () => {
-// Get all FAQ triggers
-const faqTriggers = document.querySelectorAll('.accordion_trigger');
+// toggle burger menu 
+const toggleBurgerMenu = () => {
+    const burger = document.querySelector('.burger');
+    const burgerLine = document.querySelectorAll('.burger_line');
+    const navlinks = document.querySelector('.mobile_nav_div .header_nav');
 
-    // //Default expanded answer
-    // const defaultExpandedTrigger = faqTriggers[0];
-    // const defaultExpandedAnswer = defaultExpandedTrigger.parentElement.nextElementSibling;
-    // defaultExpandedAnswer.classList.add('show_faq_answer');
-    // defaultExpandedAnswer.setAttribute('aria-hidden', 'false');
-    // defaultExpandedTrigger.setAttribute('aria-expanded', 'true');
+    burger.addEventListener('click', (e) => {
+        e.stopPropagation();
+
+        burgerLine[0].classList.toggle('burger_line1');
+        burgerLine[1].classList.toggle('burger_line2');
+        burgerLine[2].classList.toggle('burger_line3');
+
+        navlinks.classList.toggle('show_header_nav');
+    });
+
+    // Click event on the document
+    document.documentElement.addEventListener('click', () => {
+        // Close the navigation menu if it's open
+        if (navlinks.classList.contains('show_header_nav')) {
+            navlinks.classList.remove('show_header_nav');
+            burgerLine.forEach(line => line.classList.remove('burger_line1', 'burger_line2', 'burger_line3'));
+        }
+    });
+};
+
+toggleBurgerMenu();
+// 
+
+//toggle FAQ accordion
+const accordionToggle = () => {
+    // Get all FAQ triggers
+    const faqTriggers = document.querySelectorAll('.accordion_trigger');
+
+    //Default expanded answer
+    const defaultExpandedTrigger = faqTriggers[0];
+    const defaultExpandedAnswer = defaultExpandedTrigger.parentElement.nextElementSibling;
+    defaultExpandedAnswer.classList.add('show_faq_answer');
+    defaultExpandedAnswer.setAttribute('aria-hidden', 'false');
+    defaultExpandedTrigger.setAttribute('aria-expanded', 'true');
 
     // Click event listeners to each FAQ trigger
     faqTriggers.forEach(trigger => {
@@ -74,7 +103,7 @@ const animationOnScroll = () => {
     observerTwo.observe(document.querySelector('.features_section .first_child'));
     observerTwo.observe(document.querySelectorAll('.feature')[0]);
     observerTwo.observe(document.querySelector('.global_scaling div'));
-    // observerTwo.observe(document.querySelector('.faq_section h2'));
+    observerTwo.observe(document.querySelector('.global_connection div'));
 
     //from right to left
     const observerThree = new IntersectionObserver (entries => {

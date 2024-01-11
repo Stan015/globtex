@@ -83,6 +83,10 @@ header .nav_div {
     margin-left: 5%;
 }
 
+.mobile_nav_div {
+    display: none;
+}
+
 .logo {
     display: flex;
     gap: 1rem;
@@ -289,12 +293,14 @@ main .features_section {
 
 .features_section .second_child {
     display: grid;
-    grid-template-columns: repeat(2, 20rem);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
+    width: 50%;
     gap: 3rem;
 }
 
 .features_section .second_child div {
+    display: block;
     width: 100%;
 }
 
@@ -352,7 +358,7 @@ main .second_section .global_scaling {
     width: 36rem;
     height: 27rem;
 }
-
+/* 
 .grow_big {
     animation: growBig 1000ms ease-out;
 }
@@ -367,7 +373,7 @@ main .second_section .global_scaling {
         width: 36rem;
         height: 27rem;
     }
-}
+} */
 
 .global_reach div,
 .global_scaling div {
@@ -376,6 +382,7 @@ main .second_section .global_scaling {
     width: 30rem;
     gap: 2rem;
     position: relative;
+    justify-content: center;
 }
 
 .global_reach div h2,
@@ -405,8 +412,6 @@ main .second_section .global_scaling {
     background-color: #F9F9F9;
     color: #627EEA;
     transition: all 500ms;
-    position: absolute;
-    bottom: 0;
 
     &:hover {
         transform: translate(0.5rem, -0.5rem);
@@ -532,6 +537,7 @@ footer {
     border-top: 2px solid #DCDCDC;
 }
 
+
 footer .global_connection {
     display: block;
     width: 90%;
@@ -556,6 +562,10 @@ footer .global_connection {
     position: absolute;
     top: 0;
     right: -14.5rem;
+}
+
+.global_connection div {
+    width: max-content;
 }
 
 .global_connection h2 {
@@ -706,7 +716,8 @@ footer .global_connection {
 .second_ftr_div .second_child div ul li a {
     padding: 0.5rem 0.5rem 0.5rem 0;
     color: #606060;
-
+    font-size: 1rem;
+    
     &:hover {
         color: #627EEA;
         text-decoration: underline;
@@ -758,6 +769,494 @@ footer .third_ftr_div {
         color: #627EEA;
     }
 }
+
+/* responsiveness */
+    @media screen and (max-width: 1024px) {
+        header .nav_div {
+            display: none;
+        }
+
+        header .mobile_nav_div {
+            display: flex;
+            width: 90%;
+            height: 6.25rem;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 5%;
+            margin-left: 5%;
+            position: relative;
+        }
+
+        .mobile_nav_div .header_nav {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            min-height: 100svh;
+            width: 70%;
+            background-color: #FFFFFF;
+            top: 0;
+            right: -5%;
+            align-items: center;
+            padding-top: 7rem;
+            border-radius: 2rem 0 0 2rem;
+            gap: 4rem;
+            z-index: 1;
+            animation: show_nav 500ms ease-out;
+        }
+
+        .show_header_nav {
+            display: flex !important;
+        }
+
+        @keyframes show_nav {
+            from {
+                transform: translateX(2rem);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .primary_nav ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* burger menu */
+        .burger {
+            display: flex;
+            flex-direction: column;
+            height: max-content;
+            width: max-content;
+            gap: 0.5rem;
+            z-index: 2;
+        }
+
+        .burger_line {
+            width: 4rem;
+            height: 0.5rem;
+            background-color: #627EEA;
+            border-radius: 100vh;
+            transition: all 500ms ease-out;
+        }
+
+        .burger_line1 {
+            transform: rotate(45deg) translateY(0.7rem);
+        }
+
+        .burger_line2 {
+            display: none;
+        }
+
+        .burger_line3 {
+            transform: rotate(-45deg) translateY(-0.7rem);
+        }
+        
+        .hero_section h1 {
+            font-size: 3rem;
+            width: 50rem;
+        }
+        
+        .hero_section  .second_p {
+            width: 38rem;
+            font-size: 1.3rem;
+        }
+        
+        main .features_section {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-between; */
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .features_section .first_child {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .features_section .first_child h2 {
+            text-align: center;
+        }
+
+        .features_section .first_child p {
+            text-align: center;
+        }
+
+        .features_section .first_child button {
+            position: unset;
+        }
+
+        .features_section .second_child {
+            width: 100%;
+            gap: 2rem;
+        }
+
+        .features_section .second_child div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .features_section .second_child div p {
+            text-align: center;
+        }
+        
+        main .second_section .global_reach,
+        main .second_section .global_scaling {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .global_reach div,
+        .global_scaling div {
+            align-items: center;
+        }
+
+        .global_reach div h2,
+        .global_scaling div h2 {
+            text-align: center;
+        }
+        .global_reach div p,
+        .global_scaling div p {
+            text-align: center;
+        }
+
+        .faq_section .accordion {
+            width: 45rem;
+        }
+
+        .second_ftr_div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .second_ftr_div .first_child {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .second_ftr_div .first_child .social_div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .second_ftr_div .first_child p {
+            text-align: center;
+        }
+        
+    }
+
+    @media screen and (max-width: 768px) {
+
+        .hero_section h1 {
+            font-size: 2rem;
+            width: 32rem;
+            line-height: 4rem;
+        }
+        
+        .hero_section  .second_p {
+            width: 30rem;
+            font-size: 1rem;
+        }
+
+        .map {
+            display: block;
+            width: 100%;
+            height: 20rem;
+        }
+
+        .features_section .first_child h2 {
+            font-size: 1.5rem;
+        }
+
+        .features_section .first_child p {
+            font-size: 1rem;
+            width: 28rem;
+        }
+
+        .features_section .second_child {
+            gap: 2rem;
+        }
+
+        .features_section .second_child div h3 {
+            font-size: 1.2rem;
+        }
+
+        .features_section .second_child div p {
+            font-size: 1rem;
+        }
+
+        .global_reach div,
+        .global_scaling div {
+            width: 28rem;
+        }
+
+        .global_reach img,
+        .global_scaling img {
+            width: 31rem;
+            height: 22rem;
+        }
+
+        .global_reach div h2,
+        .global_scaling div h2 {
+            font-size: 1.5rem;
+        }
+        .global_reach div p,
+        .global_scaling div p {
+            font-size: 1rem;
+        }
+
+        .faq_section h2 {
+            font-size: 1.5rem;
+        }
+
+        .faq_section .accordion {
+            width: 28rem;
+        }
+
+        .accordion_trigger {
+            font-size: 0.8rem;
+            text-align: start;
+        }
+
+        .accordion_item .faq_answer {
+            font-size: 0.7rem;
+        }
+
+        footer .global_connection div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 1rem;
+        }
+        
+        .global_connection h2 {
+            text-align: center;
+            font-size: 1.5rem;
+            text-shadow: 0.5px 0.5px #0B0B0B;
+        }
+        
+        .global_connection p {
+            text-align: center;
+            text-shadow: 0.5px 0.5px #0B0B0B;
+        }
+
+        .second_ftr_div .second_child {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+        }
+
+        
+    }
+
+    @media screen and (max-width: 531px) {
+
+        .hero_section > p:nth-child(1) {
+            font-size: 0.5rem;
+            padding: 0.5rem 1rem;
+        }
+        .hero_section h1 {
+            font-size: 1.3rem;
+            width: 20rem;
+            line-height: 2.5rem;
+        }
+        
+        .hero_section  .second_p {
+            width: 20rem;
+            font-size: 0.8rem;
+            line-height: 1.5;
+        }
+
+        .hero_section .quick_buttons {
+            gap: 1rem;
+        }
+        
+        .quick_buttons button {
+            width: max-content;
+            height: 3rem;
+            border-radius: 100vh;
+            font-size: 0.8rem;
+        }
+
+        .map {
+            display: block;
+            width: 100%;
+            height: 15rem;
+        }
+
+        .features_section .first_child {
+            width: 20rem;
+        }
+
+        .features_section .first_child h2 {
+            font-size: 1.3rem;
+        }
+
+        .features_section .first_child p {
+            font-size: 0.8rem;
+            width: 20rem;
+        }
+
+        .features_section .first_child button {
+            font-size: 0.8rem;
+            width: max-content;
+        }
+
+        .features_section .second_child {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            width: 100%;
+            gap: 2rem;
+        }        
+
+        .features_section .second_child div h3 {
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .features_section .second_child div p {
+            font-size: 0.8rem;
+        }
+
+        .global_reach div,
+        .global_scaling div {
+            width: 20rem;
+        }
+
+        .global_reach p:first-child,
+        .global_scaling p:first-child {
+            font-size: 0.5rem;
+            padding: 0.5rem 1rem;
+        }
+
+        .global_reach img,
+        .global_scaling img {
+            width: 20rem;
+            height: 11rem;
+        }
+
+        .global_reach div h2,
+        .global_scaling div h2 {
+            font-size: 1.2rem;
+        }
+        .global_reach div p,
+        .global_scaling div p {
+            font-size: 0.8rem;
+        }
+
+        .faq_section .first_child {
+            font-size: 0.5rem;
+            padding: 0.5rem 1rem;
+        }
+
+        .faq_section h2 {
+            font-size: 1.2rem;
+        }
+
+        .faq_section .accordion {
+            width: 20rem;
+        }
+
+        .accordion_item h3::after {
+            width: 1.2rem;
+            height: 1.2rem;
+            right: 1.2rem;
+        }
+
+        .accordion_trigger {
+            font-size: 0.7rem;
+            text-align: start;
+            font-weight: 500;
+            padding: 0.8rem;
+        }
+
+        .accordion_item .faq_answer {
+            font-size: 0.7rem;
+            padding: 0.8rem;
+        }
+
+        footer .global_connection {
+            top: -10rem;
+        }
+        
+        .global_connection::after {
+            width: 20rem;
+            right: -5rem;
+        }
+
+        footer .global_connection div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 1rem;
+            background-color: unset;
+        }
+        
+        .global_connection h2 {
+            text-align: center;
+            font-size: 1.2rem;
+            text-shadow: 0.5px 0.5px #0B0B0B;
+        }
+        
+        .global_connection p {
+            font-size: 0.8rem;
+            text-align: center;
+            text-shadow: 0.5px 0.5px #0B0B0B;
+        }
+        
+        .global_connection button {
+            font-size: 0.8rem;
+        }
+
+        .second_ftr_div .first_child {
+            width: 20rem;
+        }
+
+        .second_ftr_div .first_child .social_div {
+            width: 20rem;
+        }
+
+        .second_ftr_div .first_child .email_div {
+            width: 90%;
+            margin: 0 5%;
+        }
+        
+        .second_ftr_div .second_child div h4 {
+            font-size: 0.9rem;
+            color: #627EEA;
+            font-weight: 400;
+        }
+        
+        .second_ftr_div .second_child div ul li a {
+            font-size: 0.8rem;
+        }
+
+        footer .third_ftr_div {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .third_ftr_div .copyright {
+            font-size: 0.5rem;
+        }
+
+        .third_ftr_div .terms {
+            font-size: 0.5rem;
+        }
+
+    }
+/*  */
 
 /* animations on page load and scroll */
 

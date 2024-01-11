@@ -19,11 +19,11 @@
 
             <nav class="primary_nav" aria-labelledby="primary_nav">
                 <ul>
-                    <li><a href="#">Features</a></li>
+                    <li><a href="#features">Features</a></li>
                     <li><a href="#">Community</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Support</a></li>
-                    <li><a href="#">FAQ?</a></li>
+                    <li><a href="#faq">FAQ?</a></li>
                 </ul>
             </nav>
 
@@ -31,6 +31,35 @@
                 <a href="#">Get Started Now</a>
             </nav>
         </div>
+
+        <div class="mobile_nav_div">
+            <a href="#" class="logo" aria-label="globtex logo">
+                <img src="images/globtex_logo.svg" alt="globtex logo">
+                <img src="images/globtex.svg" alt="globtex logo text">
+            </a>
+
+            <div class="header_nav">
+                <nav class="primary_nav" aria-labelledby="primary_nav">
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#faq">FAQ?</a></li>
+                    </ul>
+                </nav>
+                <nav class="secondary_nav" aria-labelledby="secondary_nav">
+                    <a href="#">Get Started Now</a>
+                </nav>
+            </div>
+
+            <div class="burger" aria-label="burger menu">
+                <div class="burger_line"></div>
+                <div class="burger_line"></div>
+                <div class="burger_line"></div>
+            </div>
+        </div>
+
 
         <section class="hero_section">
             <p>Join over +35k community</p>
@@ -47,7 +76,7 @@
     </header>
 
     <main>
-        <section class="features_section">
+        <section class="features_section" id="features">
             <div class="first_child">
                 <h2>Features for <br>communication solution</h2>
                 <p>Our robust features are crafted to enhance collaboration, streamline interaction fostering  connections across the globe.</p>
@@ -106,7 +135,7 @@
         </section>
     </main>
 
-    <section class="faq_section">
+    <section class="faq_section" id="faq">
         <p class="first_child">Your Answers</p>
         <h2>Frequently Asked Questions</h2>
 
@@ -195,10 +224,11 @@
 
     <footer>
         <div class="global_connection">
-            <h2>Connect Globally, <br>Thrive Locally with GlobNest!</h2>
-            <p>Ready to transform the way you connect, collaborate, and create?</p>
-
-            <button type="button">Get Started Today</button>
+            <div>
+                <h2>Connect Globally, <br>Thrive Locally with GlobNest!</h2>
+                <p>Ready to transform the way you connect, collaborate, and create?</p>
+                <button type="button">Get Started Today</button>
+            </div>
         </div>
 
         <div class="second_ftr_div">
@@ -229,9 +259,9 @@
                     <h4>Customer Service</h4>
                     <ul>
                         <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#faq">FAQs</a></li>
                         <li><a href="#">Customer Stories</a></li>
-                        <li><a href="#">Features</a></li>
+                        <li><a href="#features">Features</a></li>
                         <li><a href="#">About Us</a></li>
                     </ul>
                 </div>
